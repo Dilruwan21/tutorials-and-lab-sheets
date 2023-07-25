@@ -1,1 +1,117 @@
+Enter your choice:
+Enter number 1:
+Enter number 2:
+Your Answer is:
+
+Create the above mentioned in c# console application and display it to the user. If user need to do an 
+Addition user need to insert 1 as the choice. For subtraction it should be 2 etc.
+Your program should contain a separate class call “CalculateValues” and inside the class you 
+should add four methods which perform four arithmetic operations. All the methods should take 
+two parameters which are user inserted numbers.
+And at the end of the method return the answer out of the method.
+In main class if user want to do an addition call only the addition method in separate class.
+If user want to do a subtraction call only the subtraction method in separate class. ETC.
+And display the final answer as shown in the figure 01.  
+
+
+ 
+
+
+
+
+
+internal class Program
+    {
+        static void Main(string[] args)
+        {
+                calculate ssmd = new calculate();
+          
+         
+                Console.WriteLine("Enter 1 for addition");
+                Console.WriteLine("Enter 2 for subtraction");
+                Console.WriteLine("Enter 3 for multification");
+                Console.WriteLine("Enter 4 for divition");
+
+                Console.WriteLine("Enter your choice");
+                int choice = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter no1");
+                int no1 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter no2");
+                int no2 = int.Parse(Console.ReadLine());
+
+            double result = 0;
+            
+
+            switch (choice)
+            {
+                case 1:
+                    result = calculate.sum(no1, no2);
+                 
+                    break;
+                case 2:
+                    result = calculate.sub(no1, no2);
+                   
+                    break;
+                case 3:
+                    result = calculate.multi(int no1, no2);
+                   
+                    break;
+                case 4:
+                    result = calculate.div(int no1,int no2);
+                    
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice.");
+                    break;
+            }
+
+            Console.WriteLine($"Your Answer is: {result} ");
+            Console.ReadLine();
+        }
+    }
+
+
+
+}
+    }
+}
+
+
+
+
+
+
+
+internal class calculate
+    {
+        public int sum(int no1, int no2)
+        {
+            return no1 + no2;
+        }
+        public int sub(int no1,int no2)
+        {
+            return no1 - no2;
+        }
+        public int multi(int no1,int no2)
+        {
+            return no1 * no2;
+        }
+        public int div(int no1,int no2)
+        {
+            return no1 / no2;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
