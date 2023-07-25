@@ -1,1 +1,25 @@
+Q4
 
+Add a separate class file to Console application program and create a method call private void sayHello(). Inside the method display hello world. In main class create object and try to access the sayHello() method by using the class object. Can you access the method? Explain why?  
+
+class MyClass
+{
+    private void sayHello()
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}
+
+
+
+
+class Program
+{
+    static void Main()
+    {
+        MyClass myObj = new MyClass();
+        // Uncomment the following line to see the error.
+        // myObj.sayHello(); // This line will cause a compilation error.
+        Console.WriteLine("Method cannot be accessed directly.");
+    }
+}
